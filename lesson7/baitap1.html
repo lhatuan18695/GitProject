@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính điểm trung bình</title>
+</head>
+<body>
+<input type="text" id="vatly" placeholder="Nhập điểm Vật Lý">
+<input type="text" id="hoahoc" placeholder="Nhập điểm Hoá Học">
+<input type="text" id="sinhhoc" placeholder="Nhập điểm Sinh Học">
+<button onclick="tinhDiemTrungBinh()">Tính Trung Bình</button>
+<p id="ketqua"></p>
+<script>
+    function tinhDiemTrungBinh() {
+        let diemLy = +document.getElementById("vatly").value;
+        let diemHoa = +document.getElementById("hoahoc").value;
+        let diemSinh = +document.getElementById("sinhhoc").value;
+        let diemTrungBinh = +(diemLy + diemHoa + diemSinh) / 3;
+        document.getElementById("ketqua").innerHTML = "Điểm trung bình: " + diemTrungBinh;
+    }
+</script>
+</body>
+</html>
